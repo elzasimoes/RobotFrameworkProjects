@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210729 15:41:33.234" rpa="false" schemaversion="2">
+<suite id="s1" name="Google" source="C:\Users\Elza\Desktop\2021\RobotFrameworkProjects\Web\google\google.robot">
+<kw name="Open Browser" library="Selenium2Library" type="SETUP">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210729 15:41:39.531" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20210729 15:41:39.530" endtime="20210729 15:42:07.127"/>
+</kw>
+<test id="s1-t1" name="Open Google">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210729 15:42:07.130" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20210729 15:42:07.181" level="INFO">Firefox driver log is always forced to to: C:\Users\Elza\Desktop\2021\RobotFrameworkProjects\Web\google\geckodriver-3.log</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210729 15:42:39.230" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210729 15:42:07.187" endtime="20210729 15:42:39.230"/>
+</kw>
+<msg timestamp="20210729 15:42:39.440" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" starttime="20210729 15:42:07.130" endtime="20210729 15:42:39.440"/>
+</kw>
+<status status="FAIL" starttime="20210729 15:42:07.127" endtime="20210729 15:42:39.441">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<status status="FAIL" starttime="20210729 15:41:33.321" endtime="20210729 15:42:39.469"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Google">Google</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
