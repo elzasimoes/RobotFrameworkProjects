@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210730 13:05:59.629" rpa="false" schemaversion="2">
+<suite id="s1" name="Suite" source="C:\Users\Elza\Desktop\2021\RobotFrameworkProjects\Android\Robot Framework Appium NuClone\suite.robot">
+<test id="s1-t1" name="Ver meu saldo">
+<kw name="Abrir App" library="base" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Teste</arg>
+<arg>app=${EXECDIR}/app/nuclone.apk</arg>
+<arg>udid=emulator-5554</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210730 13:06:01.967" endtime="20210730 13:06:26.474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=card-hero</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210730 13:06:26.474" endtime="20210730 13:06:33.753"/>
+</kw>
+<status status="PASS" starttime="20210730 13:06:01.966" endtime="20210730 13:06:33.753"/>
+</kw>
+<kw name="Mostra saldo" library="steps">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=show-balance</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210730 13:06:33.757" level="INFO">Clicking element 'accessibility_id=show-balance'.</msg>
+<status status="PASS" starttime="20210730 13:06:33.754" endtime="20210730 13:06:33.884"/>
+</kw>
+<status status="PASS" starttime="20210730 13:06:33.754" endtime="20210730 13:06:33.884"/>
+</kw>
+<kw name="Meu saldo deve ser de" library="steps">
+<arg>R$ 5.500,00</arg>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${USER_BALENCE}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210730 13:06:33.885" endtime="20210730 13:06:34.012"/>
+</kw>
+<kw name="Element Text Should Be" library="AppiumLibrary">
+<arg>${USER_BALENCE}</arg>
+<arg>${saldo}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<msg timestamp="20210730 13:06:34.016" level="INFO">Verifying element 'accessibility_id=user-balance' contains exactly text 'R$ 5.500,00'.</msg>
+<status status="PASS" starttime="20210730 13:06:34.012" endtime="20210730 13:06:34.121"/>
+</kw>
+<status status="PASS" starttime="20210730 13:06:33.885" endtime="20210730 13:06:34.121"/>
+</kw>
+<kw name="Fechar App" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210730 13:06:34.668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210730 13:06:34.125" endtime="20210730 13:06:34.669"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20210730 13:06:34.669" endtime="20210730 13:06:35.373"/>
+</kw>
+<status status="PASS" starttime="20210730 13:06:34.124" endtime="20210730 13:06:35.373"/>
+</kw>
+<status status="PASS" starttime="20210730 13:06:01.965" endtime="20210730 13:06:35.374"/>
+</test>
+<status status="PASS" starttime="20210730 13:05:59.639" endtime="20210730 13:06:35.376"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suite">Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

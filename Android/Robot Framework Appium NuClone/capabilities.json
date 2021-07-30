@@ -1,0 +1,7 @@
+{
+    "automationName": "UiAutomator2",
+    "platformName": "Android",
+    "deviceName": "Android Emulator",
+    "udid": "emulator-5554",
+    "app": "C:\\Users\\Elza\\Desktop\\2021\\RobotFrameworkProjects\\Android\\Robot Framework Appium NuClone\\app\\nuclone.apk"
+  }
