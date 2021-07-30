@@ -1,0 +1,5 @@
+robotframework
+pip install --upgrade robotframework-appiumlibrary
+npm install -g appium
+start via cmd: appium
+uiautomatorviewer instead appium inspector
